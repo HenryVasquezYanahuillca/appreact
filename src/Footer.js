@@ -1,5 +1,4 @@
 import React ,{Component}from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class Footer extends Component {
@@ -9,7 +8,7 @@ class Footer extends Component {
             <p><span className="lnr lnr-copyright"></span> Todo los derechos reservados</p>
             <a
               className="app-link"
-              href="#"
+              href="https://www.onecreha.com/"
               rel="noopener noreferrer">Henry Vásquez Yanahuillca</a>
           </footer>
     );

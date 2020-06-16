@@ -1,8 +1,7 @@
 import React,{Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Signin from './Signin';
-import {BrowserRouter,Switch,Route,Redirect} from 'react-router-dom';
+import logo from './../../logo.svg';
+import './../../App.css';
+import {Redirect} from 'react-router-dom';
 
 class Header extends Component{
   constructor(props){
@@ -57,6 +56,5 @@ class Header extends Component{
 
 
 }
-//onClick={this.btnSignout}onClick={this.manageMenu}
 
 export default Header;

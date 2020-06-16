@@ -2,13 +2,12 @@ import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Footer from './Footer';
-import Auth from './Auth';
-import Home from './Home';
+
+
 import Routers from './Routers';
-import {BrowserRouter,Switch,Route,Redirect} from 'react-router-dom';
 
 class Signin extends Component {
-  dataU={"hvasquez":"12345678","a":"1","b":"2"};
+  dataU={"hvasquez":"12345678","a":"1","b":"2"};//array de usuarios
   is_auth=false;
   constructor(props){
     super(props);
@@ -19,7 +18,6 @@ class Signin extends Component {
   }
   render(){
     var aut=localStorage.getItem('auth');
-    //{this.state.redirect?<Redirect to="/home"/>:console.log('No session')}
     if (aut!=null) {
       return(<div><Routers/></div>);
     }
@@ -63,10 +61,10 @@ class Signin extends Component {
     var nick_name=document.querySelector('#nickname').value;
     var pass_word=document.querySelector('#password').value;
 
-    if (nick_name==''||pass_word=='') {
+    if (nick_name===''||pass_word==='') {
       alert('please complete fields')
     }else{
-      if (this.dataU[nick_name]==pass_word) {
+      if (this.dataU[nick_name]===pass_word) {
         this.is_auth=true;
         localStorage.setItem('auth',nick_name);
         this.setState({redirect:true})

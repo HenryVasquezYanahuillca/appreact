@@ -224,9 +224,7 @@ code {
 /* start style footer */
 
 /* start style header */
-.btn-menu{
-  display: none;
-}
+
 .menu-user{
   z-index: 10;
   position: fixed;
@@ -300,6 +298,9 @@ code {
   background: none;
   cursor: pointer;
 }
+.wrap-header .btn-menu{
+  display: none;
+}
 .wrap-header h1{
   font-size: 2em;
 }
@@ -369,7 +370,9 @@ code {
 
 
 @media(max-width:768px){
-  .btn-menu{
+  .wrap-header .btn-menu{
+    margin: 0;
+    padding: 0;
     display: inline-block;
   }
   .box-post{
@@ -408,8 +411,11 @@ code {
     right: 0;
     left: 0;
   }
+  .logo-header{
+    padding: .4em 0;
+  }
   .wrap-header h1{
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   .wrap-header{
     width: 100%;

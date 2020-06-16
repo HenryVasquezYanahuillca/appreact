@@ -1,13 +1,12 @@
 import React,{useState,useEffect} from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import Header from './Header';
+import Header from './components/Header/Header';
 import Nav from './Nav';
 import Footer from './Footer';
 
 
-function Post() {
+function Post() {  
   useEffect(()=>{
     fecthItems();
   },[]);
@@ -15,10 +14,7 @@ function Post() {
   const fecthItems=async()=>{
     const data=await fetch('https://jsonplaceholder.typicode.com/posts');
     const items =await data.json();
-    console.log('a');
     setItems(items);
-    console.log(items);
-    console.log(items);
   }
   return (
     <div>
