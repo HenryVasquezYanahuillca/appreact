@@ -21,6 +21,11 @@ class Signin extends Component {
     if (aut!=null) {
       return(<div><Routers/></div>);
     }
+
+    //
+
+    //
+
     return (
       <div className="box-signin">
             <div className="wrap-box-signin">
@@ -44,6 +49,9 @@ class Signin extends Component {
             </div>
             <Footer clase="footer"/>
           </div>
+
+          
+
     );
 
   }
